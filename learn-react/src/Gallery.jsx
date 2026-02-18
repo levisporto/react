@@ -79,19 +79,17 @@ const sculptureList = [{
 
 
 export default function Gallery() {
-  //now lets create a simple to-do app
-  const [index, setIndex] = useState(0);
-
-  function handleClick() {
-    setIndex(index + 1);
-  }
-
+  const [name, setName] = useState('');
+ 
+  useEffect(() => {
+    document.title = `Hi, ${name}`;
+  });
+ 
   return (
-    <>
-     
-
-
-    </>
+    <div>
+      <p>Use the input field below to rename this page!</p>
+      <input onChange={({target}) => setName(target.value)} value={name} type='text' />
+    </div>
   );
 }
 
