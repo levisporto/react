@@ -79,16 +79,14 @@ const sculptureList = [{
 
 
 export default function Gallery() {
-  const [name, setName] = useState('');
+
  
-  useEffect(() => {
-    document.title = `Hi, ${name}`;
-  });
+  
  
   return (
     <div>
-      <p>Use the input field below to rename this page!</p>
-      <input onChange={({target}) => setName(target.value)} value={name} type='text' />
+      <p>Chibatinha</p>
+      
     </div>
   );
 }
